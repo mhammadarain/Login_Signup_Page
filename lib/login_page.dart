@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_signup_page/home_screen.dart';
 import 'package:login_signup_page/signup_page.dart';
-import 'package:login_signup_page/task_list_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 
@@ -146,7 +145,7 @@ class _LoginPageState extends State<LoginPage> {
                           pwController.text.toString()==pwGet){
                         Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context)=> TaskListScreen()));
+                            MaterialPageRoute(builder: (context)=> const HomeScreen()));
                       }else{
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Enter correct detail!")));
                       }
